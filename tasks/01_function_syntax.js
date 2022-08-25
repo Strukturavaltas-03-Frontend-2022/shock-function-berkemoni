@@ -31,7 +31,7 @@ function add(num1, num2) {
  * @returns {string} - a kapott üzenet.
  */
 function logTheString(message) {
-    return;
+    return message;
 }
 
 /**
@@ -43,7 +43,7 @@ function logTheString(message) {
  * @desc Példa a név beszúrására: `Howdy ${userName}!`
  */
 function getGreeting(name) {
-    return;
+    return `Hello ${name}!`;
 }
 
 /**
@@ -55,7 +55,7 @@ function getGreeting(name) {
  */
 function getTitleGreeting(name) {
     const titleCaseName = name[0].toUpperCase() + name.slice(1);
-    return;
+    return `Hello ${titleCaseName}!`;
 }
 
 /**
@@ -66,7 +66,8 @@ function getTitleGreeting(name) {
  * @returns {string} `Product: <name>!`, <name> = productName nagy kezdőbetűvel.
  */
 function getProductDetails(productName) {
-    // 
+    const productCaseName = productName[0].toUpperCase() + productName.slice(1);
+    return `Product: ${productCaseName}!`
 }
 
 /**
@@ -78,7 +79,7 @@ function getProductDetails(productName) {
  */
 const getBruttoPrice = function(price) {
     const bruttoPrice = price * 1.27;
-    return;
+    return bruttoPrice;
 }
 
 /**
@@ -91,7 +92,7 @@ const getBruttoPrice = function(price) {
  */
 const getRoundedBruttoPrice = function(price) {
     const bruttoPrice = Math.round(price * 1.27);
-    return;
+    return bruttoPrice;
 }
 
 /**
@@ -103,7 +104,8 @@ const getRoundedBruttoPrice = function(price) {
  * @returns {number} a price 1.35-szöröse, egészre kerekítve.
  */
 const getSellPrice = function(price) {
-    // 
+    const increasedPrice = Math.round(price*1.35);
+    return increasedPrice;
 }
 
 /**
@@ -115,7 +117,8 @@ const getSellPrice = function(price) {
  * @returns {number} a price 1.35-szörösének a 0.9-szerese, egészre kerekítve.
  */
 const getActionPrice = function(price) {
-    // 
+    const modifiedPrice = Math.round(price*1.35*0.9);
+    return modifiedPrice;
 }
 
 /**
@@ -129,7 +132,10 @@ const getActionPrice = function(price) {
  * <stock> = a product.stock
  */
 const getProductDescrition = product => {
-    // 
+    const productCaseName9 = product.name[0]toUpperCase() + product.name.slice(1);
+    const increasedPrice9 = Math.round(product.price*1.35);
+    return `${productCaseName9}, ${increasedPrice9}, in stock: ${product.stock}`
+
 }
 
 /**
