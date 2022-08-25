@@ -67,7 +67,7 @@ function getTitleGreeting(name) {
  */
 function getProductDetails(productName) {
     const productCaseName = productName[0].toUpperCase() + productName.slice(1);
-    return `Product: ${productCaseName}!`
+    return `Product: ${productCaseName}!`;
 }
 
 /**
@@ -132,10 +132,9 @@ const getActionPrice = function(price) {
  * <stock> = a product.stock
  */
 const getProductDescrition = product => {
-    const productCaseName9 = product.name[0]toUpperCase() + product.name.slice(1);
+    const productCaseName9 = product.name[0].toUpperCase() + product.name.slice(1);
     const increasedPrice9 = Math.round(product.price*1.35);
     return `${productCaseName9}, ${increasedPrice9}, in stock: ${product.stock}`
-
 }
 
 /**
@@ -150,8 +149,11 @@ const getProductDescrition = product => {
  * <city> = member városa
  * @desc EXPORTÁLNI KELL A FÜGGVÉNYT!
  */
-
-
+const getBio = member => {
+    const memberCaseName = member.name[0].toUpperCase() + member.name.slice(1);
+    return `${memberCaseName}, ${member.age} years old, live in: ${member.city}.`;
+}
+export {getBio};
 
 /**
  * 11. feladat
@@ -167,6 +169,8 @@ const getProductDescrition = product => {
  */
 const getMemberDesc = (member = {name: 'jimmy', birthYear: 2000, city: 'SF'}) => {
     const age = new Date().getFullYear() - member.birthYear;
+    const memberCaseName11 = member.name[0].toUpperCase() + member.name.slice(1);
+    return `${memberCaseName11}, ${age} years old, live in: ${city}.`;
 }
 
 /**
@@ -183,7 +187,13 @@ const getMemberDesc = (member = {name: 'jimmy', birthYear: 2000, city: 'SF'}) =>
  * <type> = az autó típusa nagy kezdőbetűvel
  * @desc EXPORTÁLNI KELL A FÜGGVÉNYT!
  */
-
+const getCarDetails = car(car={man: ford, year: 2010, type: fiesta}) => {
+    const manCase = car.man[0].toUpperCase() + car.man.slice(1);
+    const age = new Date.getFullYear - car.year;
+    const typeCase = type.man[0].toUpperCase() + type.man. slice(1);
+    returns `${manCase}, ${age} years old, type: ${typeCase}.`;
+}
+export {getCarDetails};
 
 export {
     logTheString,
